@@ -15,8 +15,9 @@ Design of the database schema used to store sensor readings and alarm events acr
 ## Task 2: Control System — Bifrost (LabVIEW)
 Located in `02 Files/Task 2/`
 
-A LabVIEW-based control system (`ControllSystem.lvproj`) named **Bifrost**. Connects to an OPC server to read live sensor data and applies a PID controller with a low-pass filter (LPF) for process control. Supports both live OPC data and simulated data for testing. Includes VIs for:
-- OPC server connection and login (`opcServerConnect.vi`, `LoginOPC.vi`)
+A LabVIEW-based control system (`ControllSystem.lvproj`) named **Bifrost**. Reads live data directly from a physical sensor and pushes the values into an OPC UA server. Applies a PID controller with a low-pass filter (LPF) for process control. Supports both live sensor data and simulated data for testing. Includes VIs for:
+- OPC UA server connection and login (`opcServerConnect.vi`, `LoginOPC.vi`)
+- Air heater process (`AirHeater.vi`)
 - PID control loop (`PId.vi`)
 - Low-pass filter (`LPF.vi`)
 - Database server connection (`DBserverConnect.vi`)
@@ -39,7 +40,16 @@ A LabVIEW data logging application (`DataLogging.lvproj`) named **Muninn**. Conn
 ## Task 4: Alarm & Monitoring Application — Huginn (C# / .NET)
 Located in `02 Files/Task 4/Huginn/`
 
-A Windows Forms desktop application (`Huginn.csproj`) built in C# targeting .NET Framework 4.8, named **Huginn**. Serves as the operator-facing GUI for monitoring sensor readings and viewing alarms retrieved from the database.
+A Windows Forms desktop application (`Huginn.csproj`) built in C# targeting .NET Framework 4.8, named **Huginn**. Serves as the operator-facing GUI for monitoring live sensor readings via OPC UA subscriptions, with user authentication backed by a SQL Server database.
+
+Features implemented:
+- Login form with email/password authentication (`loginForm.cs`)
+- Session token generation, encrypted local storage with Windows DPAPI, and server-side validation (`AuthService.cs`, `TokenStorage.cs`)
+- Auto-login on startup if a valid session token exists; logout invalidates the server-side session
+- Role-based UI: admin menu is only visible to users with the Admin role
+- Live sensor gauges that subscribe to OPC UA node changes and update in real time (`MainWindow.cs`)
+- JSON-based configuration for OPC UA server connection and sensor node mappings, stored in `%AppData%\Huginn\config.json` (`ConfigManager.cs`, `AppConfig.cs`)
+- Alarm system (`Alarm.cs`) — not yet implemented
 
 ---
 
