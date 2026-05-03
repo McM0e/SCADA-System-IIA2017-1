@@ -8,15 +8,36 @@ namespace Huginn
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            string lagretToken = TokenStorage.ReadToken();
+            bool erInnlogget = false;
+            int userId = 0;
+
+            if (!string.IsNullOrEmpty(lagretToken))
+            {
+
+                userId = AuthService.ValidateToken(lagretToken);
+                erInnlogget = userId > 0;
+            }
+
+
+            if (!erInnlogget)
+            {
+                using (var login = new loginForm())
+                {
+                    if (login.ShowDialog() != DialogResult.OK)
+                    {
+                        return;
+                    }
+                    userId = login.BrukerId;
+                }
+            }
+
+            // Start hovedvinduet
+            Application.Run(new MainWindow(userId));
         }
-    }
-}
+    } }

@@ -13,7 +13,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="SubVIs" Type="Folder">
-			<Item Name="AirHeater.vi" Type="VI" URL="../../../../DAQ and OPC Assignment/task2/AirHeater.vi"/>
+			<Item Name="AirHeater.vi" Type="VI" URL="../AirHeater.vi"/>
 			<Item Name="ConfirmShutdown.vi" Type="VI" URL="../ConfirmShutdown.vi"/>
 			<Item Name="getServerParams.vi" Type="VI" URL="../getServerParams.vi"/>
 			<Item Name="LoginOPC.vi" Type="VI" URL="../LoginOPC.vi"/>
@@ -25,7 +25,7 @@
 		</Item>
 		<Item Name="Bifrost.vi" Type="VI" URL="../Bifrost.vi"/>
 		<Item Name="rtmBifrost.rtm" Type="Document" URL="../rtmBifrost.rtm"/>
-		<Item Name="settings.ini" Type="Document" URL="../../Task 3/settings.ini"/>
+		<Item Name="settings.ini" Type="Document" URL="../settings.ini"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

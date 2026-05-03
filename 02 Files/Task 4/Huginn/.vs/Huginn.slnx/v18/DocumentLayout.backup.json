@@ -1,10 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA Assignment\\02 Files\\Task 4\\Huginn\\",
+  "WorkspaceRootPath": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|c:\\users\\magne\\onedrive\\dokumenter\\skole\\iia2017-1 26v industrial information technology\\assignments\\scada assignment\\02 files\\task 4\\huginn\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|solutionrelative:mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|c:\\users\\magne\\onedrive\\dokumenter\\skole\\iia2017-1 26v industrial information technology\\assignments\\scada\\02 files\\task 4\\huginn\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|solutionrelative:authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|c:\\users\\magne\\onedrive\\dokumenter\\skole\\iia2017-1 26v industrial information technology\\assignments\\scada\\02 files\\task 4\\huginn\\configmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|solutionrelative:configmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|c:\\users\\magne\\onedrive\\dokumenter\\skole\\iia2017-1 26v industrial information technology\\assignments\\scada\\02 files\\task 4\\huginn\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|solutionrelative:appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|c:\\users\\magne\\onedrive\\dokumenter\\skole\\iia2017-1 26v industrial information technology\\assignments\\scada\\02 files\\task 4\\huginn\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|solutionrelative:mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Magne\\AppData\\Roaming\\Huginn\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|c:\\users\\magne\\onedrive\\dokumenter\\skole\\iia2017-1 26v industrial information technology\\assignments\\scada\\02 files\\task 4\\huginn\\alarm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5501F4A7-0B3E-4CB0-83A1-F59851A9A321}|Huginn.csproj|solutionrelative:alarm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +41,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA Assignment\\02 Files\\Task 4\\Huginn\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA Assignment\\02 Files\\Task 4\\Huginn\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "config.json",
+              "DocumentMoniker": "C:\\Users\\Magne\\AppData\\Roaming\\Huginn\\config.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\AppData\\Roaming\\Huginn\\config.json",
+              "ToolTip": "C:\\Users\\Magne\\AppData\\Roaming\\Huginn\\config.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\AppData\\Roaming\\Huginn\\config.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-03T15:37:45.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConfigManager.cs",
+              "DocumentMoniker": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\ConfigManager.cs",
+              "RelativeDocumentMoniker": "ConfigManager.cs",
+              "ToolTip": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\ConfigManager.cs",
+              "RelativeToolTip": "ConfigManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T11:20:25.838Z",
+              "WhenOpened": "2026-05-03T15:18:55.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\AppConfig.cs",
+              "RelativeDocumentMoniker": "AppConfig.cs",
+              "ToolTip": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\AppConfig.cs",
+              "RelativeToolTip": "AppConfig.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T15:16:55.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Alarm.cs",
+              "DocumentMoniker": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\Alarm.cs",
+              "RelativeDocumentMoniker": "Alarm.cs",
+              "ToolTip": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\Alarm.cs",
+              "RelativeToolTip": "Alarm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:06:57.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\AuthService.cs",
+              "RelativeDocumentMoniker": "AuthService.cs",
+              "ToolTip": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\AuthService.cs",
+              "RelativeToolTip": "AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:05:28.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\MainWindow.cs",
+              "RelativeDocumentMoniker": "MainWindow.cs",
+              "ToolTip": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\MainWindow.cs [Design]",
+              "RelativeToolTip": "MainWindow.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T22:02:11.046Z",
               "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwCgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T17:13:53.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.cs",
+              "DocumentMoniker": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\MainWindow.cs",
+              "RelativeDocumentMoniker": "MainWindow.cs",
+              "ToolTip": "C:\\Users\\Magne\\OneDrive\\Dokumenter\\Skole\\IIA2017-1 26V Industrial Information Technology\\Assignments\\SCADA\\02 Files\\Task 4\\Huginn\\MainWindow.cs",
+              "RelativeToolTip": "MainWindow.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T14:08:49.171Z",
+              "EditorCaption": ""
             }
           ]
         }
