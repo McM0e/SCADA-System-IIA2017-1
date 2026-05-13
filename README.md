@@ -6,9 +6,9 @@ The project follows a Norse mythology naming theme — **Bifrost** (control syst
 ---
 
 ## Task 1: Database Design
-Design of the database schema used to store sensor readings and alarm events across the system.
+Located in `02 Files/Task 1/`
 
-> *Not yet implemented.*
+Design of the database schema used to store sensor readings and alarm events across the system. A schema diagram (`DataBaseDesign.png`) and a SQL Server backup file (`SCADAAssignement.bak`) are included.
 
 ---
 
@@ -48,7 +48,8 @@ Features implemented:
 - Auto-login on startup if a valid session token exists; logout invalidates the server-side session
 - Role-based UI: admin menu is only visible to users with the Admin role
 - Live sensor gauges that subscribe to OPC UA node changes and update in real time (`MainWindow.cs`)
-- JSON-based configuration for OPC UA server connection and sensor node mappings, stored in `%AppData%\Huginn\config.json` (`ConfigManager.cs`, `AppConfig.cs`)
+- JSON-based configuration for OPC UA server connection, sensor node mappings, and database server settings, stored in `%AppData%\Huginn\config.json` (`ConfigManager.cs`, `AppConfig.cs`)
+- Sensor editor form for managing OPC UA sensor names and node IDs (`EditSensors.cs`) — in progress
 - Alarm system (`Alarm.cs`) — not yet implemented
 
 ---
