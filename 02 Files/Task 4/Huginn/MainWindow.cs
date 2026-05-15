@@ -13,6 +13,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Org.BouncyCastle.Math.EC.ECCurve;
 
 
 namespace Huginn
@@ -21,6 +22,8 @@ namespace Huginn
     {
         private AppConfig config;
         private int userId;
+        private string _currentUserName;
+        private AlarmManager _alarmManager;
         private OpcClient client;
         public MainWindow(int userId)
         {
@@ -40,6 +43,24 @@ namespace Huginn
 
             if (test) ConfigManager.Save(config);
 
+            _currentUserName = $"{user.firstname} {user.lastname}";
+
+            _alarmManager = new AlarmManager();
+            _alarmManager.getAlarms();
+
+            dgvAlarms.DataSource = _alarmManager.Alarms
+                .Where(a => a.Status != AlarmStatus.Resolved)
+                .ToList();
+
+            dgvAlarms.ReadOnly = true;
+            dgvAlarms.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAlarms.MultiSelect = false;
+            dgvAlarms.AllowUserToAddRows = false;
+            dgvAlarms.AllowUserToDeleteRows = false;
+            dgvAlarms.RowHeadersVisible = false;
+
+            ConfigureAlarmGrid();
+
             initGauges();
 
 
@@ -55,6 +76,70 @@ namespace Huginn
 
         }
 
+        private void ConfigureAlarmGrid()
+        {
+            dgvAlarms.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            var cols = dgvAlarms.Columns;
+            cols["AlarmId"].HeaderText            = "ID";
+            cols["AlarmId"].FillWeight            = 30;
+            cols["Sensor"].HeaderText             = "Sensor";
+            cols["Sensor"].FillWeight             = 90;
+            cols["Value"].HeaderText              = "Verdi";
+            cols["Value"].FillWeight              = 50;
+            cols["severity"].HeaderText           = "Alvorlighet";
+            cols["severity"].FillWeight           = 70;
+            cols["AlarmLimit"].HeaderText         = "Grense";
+            cols["AlarmLimit"].FillWeight         = 50;
+            cols["TimestampRaised"].HeaderText    = "Utløst";
+            cols["TimestampRaised"].FillWeight    = 120;
+            cols["AcknowledgedBy"].HeaderText     = "Kvittert av";
+            cols["AcknowledgedBy"].FillWeight     = 80;
+            cols["TimestampResolved"].HeaderText  = "Løst";
+            cols["TimestampResolved"].FillWeight  = 120;
+            cols["Status"].HeaderText             = "Status";
+            cols["Status"].FillWeight             = 60;
+
+            var btnCol = new DataGridViewButtonColumn();
+            btnCol.Name        = "ActionButton";
+            btnCol.HeaderText  = "";
+            btnCol.FillWeight  = 60;
+            btnCol.UseColumnTextForButtonValue = false;
+            dgvAlarms.Columns.Add(btnCol);
+
+            dgvAlarms.CellFormatting += (s, e) =>
+            {
+                if (e.ColumnIndex != dgvAlarms.Columns["ActionButton"].Index || e.RowIndex < 0) return;
+                var status = (AlarmStatus)dgvAlarms.Rows[e.RowIndex].Cells["Status"].Value;
+                e.Value = status == AlarmStatus.Active ? "Ack" : "Resolve";
+            };
+
+            dgvAlarms.CellContentClick += dgvAlarms_ActionButtonClick;
+        }
+
+        private void dgvAlarms_ActionButtonClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != dgvAlarms.Columns["ActionButton"].Index || e.RowIndex < 0) return;
+
+            int alarmId = (int)dgvAlarms.Rows[e.RowIndex].Cells["AlarmId"].Value;
+            var status  = (AlarmStatus)dgvAlarms.Rows[e.RowIndex].Cells["Status"].Value;
+
+            if (status == AlarmStatus.Active)
+                _alarmManager.AckAlarm(alarmId, userId);
+            else if (status == AlarmStatus.Acked)
+                _alarmManager.ResolveAlarm(alarmId);
+
+            RefreshAlarmGrid();
+        }
+
+        private void RefreshAlarmGrid()
+        {
+            _alarmManager.getAlarms();
+            dgvAlarms.DataSource = _alarmManager.Alarms
+                .Where(a => a.Status != AlarmStatus.Resolved)
+                .ToList();
+        }
+
         private void initGauges()
         {
 
@@ -66,10 +151,17 @@ namespace Huginn
 
             client.Connect();
 
+            setGauges();
+        
+        }
+
+        private void setGauges()
+        {
             foreach (var Sensor in config.Sensors)
             {
                 if (Sensor.Value.name != "")
                 {
+                    
                     string number = Sensor.Key.Replace("sensor", "");
 
                     var gauge = this.Controls.Find($"gauAlarm{number}", true).FirstOrDefault() as SolidGauge;
@@ -78,11 +170,18 @@ namespace Huginn
                     if (gauge != null && label != null)
                     {
                         OpcSub(Sensor.Value.name, Sensor.Value.nodeId, gauge, label);
-                        
+
                     }
                 }
+                else
+                {
+                    string number = Sensor.Key.Replace("sensor", "");
+                    var gauge = this.Controls.Find($"gauAlarm{number}", true).FirstOrDefault() as SolidGauge;
+                    var label = this.Controls.Find($"lblAlarm{number}", true).FirstOrDefault() as Label;
+                    gauge.Visible = false;
+                    label.Visible = false;
+                }
             }
-        
         }
 
         private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -101,7 +200,7 @@ namespace Huginn
 
                 SetGauge(gauge, label, sensorName);
 
-                client.SubscribeDataChange(tag, (s, e) => tempChange(s, e, gauge));
+                client.SubscribeDataChange(tag, (s, e) => tempChange(s, e, gauge, label));
 
             }
             catch (Exception ex)
@@ -111,11 +210,14 @@ namespace Huginn
 
         }
 
-        private void tempChange(object sender, OpcDataChangeReceivedEventArgs e, SolidGauge gauge)
+        private void tempChange(object sender, OpcDataChangeReceivedEventArgs e, SolidGauge gauge, Label label)
         {
-
             double temperature = e.Item.Value.As<double>();
-            DateTime timestamp = e.Item.Value.SourceTimestamp ?? DateTime.Now;
+            DateTime timestamp = (e.Item.Value.SourceTimestamp ?? DateTime.UtcNow).ToLocalTime();
+            string sensorName = label.Text;
+
+            Task.Run(() => _alarmManager.CheckLimit(sensorName, Math.Round(temperature, 2), timestamp));
+            RefreshAlarmGrid();
 
             Invoke(new Action(() =>
             {
@@ -136,6 +238,20 @@ namespace Huginn
         private void updateGauge(SolidGauge gauge, double value)
         {
             gauge.Value = Math.Round(value, 2);
+        }
+
+        private void btnSensorSettings_Click(object sender, EventArgs e)
+        {
+            EditSensors editSensorPage = new EditSensors();
+            DialogResult result = editSensorPage.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                config = ConfigManager.Load();
+                setGauges();
+                
+            }
+            
         }
     }
 }

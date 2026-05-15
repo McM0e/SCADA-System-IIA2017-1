@@ -30,14 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditSensors));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmbSens9 = new System.Windows.Forms.ComboBox();
+            this.cmbSens8 = new System.Windows.Forms.ComboBox();
+            this.cmbSens7 = new System.Windows.Forms.ComboBox();
+            this.cmbSens6 = new System.Windows.Forms.ComboBox();
+            this.cmbSens5 = new System.Windows.Forms.ComboBox();
+            this.cmbSens4 = new System.Windows.Forms.ComboBox();
+            this.cmbSens3 = new System.Windows.Forms.ComboBox();
+            this.cmbSens2 = new System.Windows.Forms.ComboBox();
+            this.cmbSens1 = new System.Windows.Forms.ComboBox();
+            this.txtNodeId9 = new System.Windows.Forms.TextBox();
+            this.txtNodeId8 = new System.Windows.Forms.TextBox();
+            this.txtNodeId7 = new System.Windows.Forms.TextBox();
+            this.txtNodeId6 = new System.Windows.Forms.TextBox();
+            this.txtNodeId5 = new System.Windows.Forms.TextBox();
+            this.txtNodeId4 = new System.Windows.Forms.TextBox();
+            this.txtNodeId3 = new System.Windows.Forms.TextBox();
+            this.txtNodeId2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,19 +59,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNodeId1 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -77,23 +77,23 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.comboBox9, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox8, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox7, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox6, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox5, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox18, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.textBox16, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.textBox14, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.textBox12, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBox10, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox6, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens9, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens8, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens7, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens6, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens5, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens4, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens3, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbSens1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId9, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId8, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId7, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId6, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId5, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId4, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId3, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId2, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 4);
@@ -106,7 +106,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtNodeId1, 2, 1);
             this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 111);
@@ -125,93 +125,201 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1180, 550);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // textBox18
+            // cmbSens9
             // 
-            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbSens9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(788, 490);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(388, 38);
-            this.textBox18.TabIndex = 29;
+            this.cmbSens9.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens9.FormattingEnabled = true;
+            this.cmbSens9.Location = new System.Drawing.Point(396, 490);
+            this.cmbSens9.Name = "cmbSens9";
+            this.cmbSens9.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens9.TabIndex = 37;
             // 
-            // textBox16
+            // cmbSens8
             // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbSens8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(788, 436);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(388, 38);
-            this.textBox16.TabIndex = 27;
+            this.cmbSens8.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens8.FormattingEnabled = true;
+            this.cmbSens8.Location = new System.Drawing.Point(396, 436);
+            this.cmbSens8.Name = "cmbSens8";
+            this.cmbSens8.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens8.TabIndex = 36;
             // 
-            // textBox14
+            // cmbSens7
             // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbSens7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(788, 382);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(388, 38);
-            this.textBox14.TabIndex = 25;
+            this.cmbSens7.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens7.FormattingEnabled = true;
+            this.cmbSens7.Location = new System.Drawing.Point(396, 382);
+            this.cmbSens7.Name = "cmbSens7";
+            this.cmbSens7.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens7.TabIndex = 35;
             // 
-            // textBox12
+            // cmbSens6
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbSens6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(788, 328);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(388, 38);
-            this.textBox12.TabIndex = 23;
+            this.cmbSens6.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens6.FormattingEnabled = true;
+            this.cmbSens6.Location = new System.Drawing.Point(396, 328);
+            this.cmbSens6.Name = "cmbSens6";
+            this.cmbSens6.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens6.TabIndex = 34;
             // 
-            // textBox10
+            // cmbSens5
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbSens5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(788, 274);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(388, 38);
-            this.textBox10.TabIndex = 21;
+            this.cmbSens5.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens5.FormattingEnabled = true;
+            this.cmbSens5.Location = new System.Drawing.Point(396, 274);
+            this.cmbSens5.Name = "cmbSens5";
+            this.cmbSens5.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens5.TabIndex = 33;
             // 
-            // textBox8
+            // cmbSens4
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbSens4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(788, 220);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(388, 38);
-            this.textBox8.TabIndex = 19;
+            this.cmbSens4.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens4.FormattingEnabled = true;
+            this.cmbSens4.Location = new System.Drawing.Point(396, 220);
+            this.cmbSens4.Name = "cmbSens4";
+            this.cmbSens4.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens4.TabIndex = 32;
             // 
-            // textBox6
+            // cmbSens3
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbSens3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(788, 166);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(388, 38);
-            this.textBox6.TabIndex = 17;
+            this.cmbSens3.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens3.FormattingEnabled = true;
+            this.cmbSens3.Location = new System.Drawing.Point(396, 166);
+            this.cmbSens3.Name = "cmbSens3";
+            this.cmbSens3.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens3.TabIndex = 31;
             // 
-            // textBox4
+            // cmbSens2
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbSens2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(788, 112);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(388, 38);
-            this.textBox4.TabIndex = 15;
+            this.cmbSens2.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens2.FormattingEnabled = true;
+            this.cmbSens2.Location = new System.Drawing.Point(396, 112);
+            this.cmbSens2.Name = "cmbSens2";
+            this.cmbSens2.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens2.TabIndex = 30;
+            // 
+            // cmbSens1
+            // 
+            this.cmbSens1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSens1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSens1.FormattingEnabled = true;
+            this.cmbSens1.Location = new System.Drawing.Point(396, 58);
+            this.cmbSens1.Name = "cmbSens1";
+            this.cmbSens1.Size = new System.Drawing.Size(385, 38);
+            this.cmbSens1.TabIndex = 4;
+            // 
+            // txtNodeId9
+            // 
+            this.txtNodeId9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNodeId9.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId9.Location = new System.Drawing.Point(788, 490);
+            this.txtNodeId9.Name = "txtNodeId9";
+            this.txtNodeId9.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId9.TabIndex = 29;
+            // 
+            // txtNodeId8
+            // 
+            this.txtNodeId8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNodeId8.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId8.Location = new System.Drawing.Point(788, 436);
+            this.txtNodeId8.Name = "txtNodeId8";
+            this.txtNodeId8.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId8.TabIndex = 27;
+            // 
+            // txtNodeId7
+            // 
+            this.txtNodeId7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNodeId7.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId7.Location = new System.Drawing.Point(788, 382);
+            this.txtNodeId7.Name = "txtNodeId7";
+            this.txtNodeId7.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId7.TabIndex = 25;
+            // 
+            // txtNodeId6
+            // 
+            this.txtNodeId6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNodeId6.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId6.Location = new System.Drawing.Point(788, 328);
+            this.txtNodeId6.Name = "txtNodeId6";
+            this.txtNodeId6.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId6.TabIndex = 23;
+            // 
+            // txtNodeId5
+            // 
+            this.txtNodeId5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNodeId5.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId5.Location = new System.Drawing.Point(788, 274);
+            this.txtNodeId5.Name = "txtNodeId5";
+            this.txtNodeId5.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId5.TabIndex = 21;
+            // 
+            // txtNodeId4
+            // 
+            this.txtNodeId4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNodeId4.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId4.Location = new System.Drawing.Point(788, 220);
+            this.txtNodeId4.Name = "txtNodeId4";
+            this.txtNodeId4.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId4.TabIndex = 19;
+            // 
+            // txtNodeId3
+            // 
+            this.txtNodeId3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNodeId3.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId3.Location = new System.Drawing.Point(788, 166);
+            this.txtNodeId3.Name = "txtNodeId3";
+            this.txtNodeId3.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId3.TabIndex = 17;
+            // 
+            // txtNodeId2
+            // 
+            this.txtNodeId2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNodeId2.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId2.Location = new System.Drawing.Point(788, 112);
+            this.txtNodeId2.Name = "txtNodeId2";
+            this.txtNodeId2.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId2.TabIndex = 15;
             // 
             // label3
             // 
@@ -381,16 +489,16 @@
             this.label4.Text = "Sensor 1";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // txtNodeId1
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtNodeId1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(788, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(388, 38);
-            this.textBox2.TabIndex = 13;
+            this.txtNodeId1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNodeId1.Location = new System.Drawing.Point(788, 58);
+            this.txtNodeId1.Name = "txtNodeId1";
+            this.txtNodeId1.Size = new System.Drawing.Size(388, 38);
+            this.txtNodeId1.TabIndex = 13;
             // 
             // btnSave
             // 
@@ -428,114 +536,6 @@
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "Sensor Settings";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(396, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(385, 38);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(396, 112);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(385, 38);
-            this.comboBox2.TabIndex = 30;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(396, 166);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(385, 38);
-            this.comboBox3.TabIndex = 31;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(396, 220);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(385, 38);
-            this.comboBox4.TabIndex = 32;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(396, 274);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(385, 38);
-            this.comboBox5.TabIndex = 33;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(396, 328);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(385, 38);
-            this.comboBox6.TabIndex = 34;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(396, 382);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(385, 38);
-            this.comboBox7.TabIndex = 35;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(396, 436);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(385, 38);
-            this.comboBox8.TabIndex = 36;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox9.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(396, 490);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(385, 38);
-            this.comboBox9.TabIndex = 37;
             // 
             // tableLayoutPanel2
             // 
@@ -589,27 +589,27 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNodeId9;
+        private System.Windows.Forms.TextBox txtNodeId8;
+        private System.Windows.Forms.TextBox txtNodeId7;
+        private System.Windows.Forms.TextBox txtNodeId6;
+        private System.Windows.Forms.TextBox txtNodeId5;
+        private System.Windows.Forms.TextBox txtNodeId4;
+        private System.Windows.Forms.TextBox txtNodeId3;
+        private System.Windows.Forms.TextBox txtNodeId2;
+        private System.Windows.Forms.TextBox txtNodeId1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSens9;
+        private System.Windows.Forms.ComboBox cmbSens8;
+        private System.Windows.Forms.ComboBox cmbSens7;
+        private System.Windows.Forms.ComboBox cmbSens6;
+        private System.Windows.Forms.ComboBox cmbSens5;
+        private System.Windows.Forms.ComboBox cmbSens4;
+        private System.Windows.Forms.ComboBox cmbSens3;
+        private System.Windows.Forms.ComboBox cmbSens2;
+        private System.Windows.Forms.ComboBox cmbSens1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

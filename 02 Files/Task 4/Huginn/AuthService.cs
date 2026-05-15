@@ -13,7 +13,7 @@ namespace Huginn
 {
     public static class AuthService
     {
-        private const string ConnectionString = "Server=10.0.0.150,1433;Database=SCADAAssignement;User Id=sa;Password=***;TrustServerCertificate=True;";
+        private const string ConnectionString = "Server=10.0.0.150,1433;Database=SCADAAssignement;User Id=sa;Password=sh@3fIJrP#4sl5d@xkYHdCq#b;TrustServerCertificate=True;";
 
         public static (bool ok, int brukerId, string token) Login(string email, string password)
         {

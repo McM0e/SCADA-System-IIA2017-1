@@ -32,7 +32,6 @@ namespace Huginn
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lnkAdminMenu = new System.Windows.Forms.LinkLabel();
@@ -61,26 +60,16 @@ namespace Huginn
             this.lblAlarm2 = new System.Windows.Forms.Label();
             this.lblAlarm1 = new System.Windows.Forms.Label();
             this.btnSensorSettings = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Sensor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Severity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Alarmlimit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimestampRaised = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AcknowledgedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimestampResolved = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ack = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvAlarms = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblAlarms = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlarms)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -168,7 +157,7 @@ namespace Huginn
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel2.Controls.Add(this.dgvAlarms);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Size = new System.Drawing.Size(1695, 676);
             this.splitContainer1.SplitterDistance = 619;
@@ -396,75 +385,16 @@ namespace Huginn
             this.btnSensorSettings.TabIndex = 12;
             this.btnSensorSettings.Text = "Edit Sensors";
             this.btnSensorSettings.UseVisualStyleBackColor = true;
+            this.btnSensorSettings.Click += new System.EventHandler(this.btnSensorSettings_Click);
             // 
-            // dataGridView1
+            // dgvAlarms
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Sensor,
-            this.Value,
-            this.Severity,
-            this.Alarmlimit,
-            this.TimestampRaised,
-            this.AcknowledgedBy,
-            this.TimestampResolved,
-            this.Status,
-            this.Ack});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1065, 583);
-            this.dataGridView1.TabIndex = 40;
-            // 
-            // Sensor
-            // 
-            this.Sensor.HeaderText = "Sensor";
-            this.Sensor.Name = "Sensor";
-            // 
-            // Value
-            // 
-            this.Value.HeaderText = "Value";
-            this.Value.Name = "Value";
-            this.Value.Width = 90;
-            // 
-            // Severity
-            // 
-            this.Severity.HeaderText = "Severity";
-            this.Severity.Name = "Severity";
-            this.Severity.Width = 130;
-            // 
-            // Alarmlimit
-            // 
-            this.Alarmlimit.HeaderText = "Alarm limit";
-            this.Alarmlimit.Name = "Alarmlimit";
-            // 
-            // TimestampRaised
-            // 
-            this.TimestampRaised.HeaderText = "Raised";
-            this.TimestampRaised.Name = "TimestampRaised";
-            this.TimestampRaised.Width = 140;
-            // 
-            // AcknowledgedBy
-            // 
-            this.AcknowledgedBy.HeaderText = "Acknowledged By";
-            this.AcknowledgedBy.Name = "AcknowledgedBy";
-            this.AcknowledgedBy.Width = 120;
-            // 
-            // TimestampResolved
-            // 
-            this.TimestampResolved.HeaderText = "Resolved";
-            this.TimestampResolved.Name = "TimestampResolved";
-            this.TimestampResolved.Width = 140;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            // 
-            // Ack
-            // 
-            this.Ack.HeaderText = "Ack";
-            this.Ack.Name = "Ack";
+            this.dgvAlarms.AllowUserToAddRows = false;
+            this.dgvAlarms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlarms.Location = new System.Drawing.Point(3, 89);
+            this.dgvAlarms.Name = "dgvAlarms";
+            this.dgvAlarms.Size = new System.Drawing.Size(1065, 583);
+            this.dgvAlarms.TabIndex = 40;
             // 
             // groupBox2
             // 
@@ -522,7 +452,7 @@ namespace Huginn
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlarms)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -563,18 +493,8 @@ namespace Huginn
         private LiveCharts.WinForms.SolidGauge gauAlarm2;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Sensor;
-        private DataGridViewTextBoxColumn Value;
-        private DataGridViewTextBoxColumn Severity;
-        private DataGridViewTextBoxColumn Alarmlimit;
-        private DataGridViewTextBoxColumn TimestampRaised;
-        private DataGridViewTextBoxColumn AcknowledgedBy;
-        private DataGridViewTextBoxColumn TimestampResolved;
-        private DataGridViewTextBoxColumn Status;
-        private DataGridViewButtonColumn Ack;
+        private DataGridView dgvAlarms;
         private LiveCharts.WinForms.SolidGauge gauAlarm1;
-        private Timer timer1;
     }
 }
 
