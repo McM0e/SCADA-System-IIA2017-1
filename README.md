@@ -49,8 +49,14 @@ Features implemented:
 - Role-based UI: admin menu is only visible to users with the Admin role
 - Live sensor gauges that subscribe to OPC UA node changes and update in real time (`MainWindow.cs`)
 - JSON-based configuration for OPC UA server connection, sensor node mappings, and database server settings, stored in `%AppData%\Huginn\config.json` (`ConfigManager.cs`, `AppConfig.cs`)
-- Sensor editor form for managing OPC UA sensor names and node IDs (`EditSensors.cs`) — in progress
-- Alarm system (`Alarm.cs`) — not yet implemented
+- Sensor editor form for managing OPC UA sensor names and node IDs (`EditSensors.cs`): populates combo boxes with sensors from the database, auto-fills the latest OPC UA node ID from measurement history, and saves the updated mapping to `config.json`
+- Alarm system (`Alarm.cs`): fully implemented with `Alarm` and `AlarmManager` classes
+  - `AlarmSeverity` enum (Info, Warning, Critical) and `AlarmStatus` enum (Active, Acked, Resolved)
+  - `CheckLimit()` detects limit breaches from live OPC UA data and raises alarms, with duplicate prevention via a DB lock
+  - `saveAlarm()` persists new alarms to the database via the `CreateAlarm` stored procedure
+  - `getAlarms()` reads active and acknowledged alarms from the `AlarmsExpl` view
+  - `AckAlarm()` / `ResolveAlarm()` update alarm state in the database
+  - Alarm table (`dgvAlarms`) in the main window shows active and acknowledged alarms with Norwegian column headers and inline Ack/Resolve action buttons
 
 ---
 
