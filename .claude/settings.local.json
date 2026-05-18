@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Magne\\\\OneDrive\\\\Dokumenter\\\\Skole\\\\IIA2017-1 26V Industrial Information Technology\\\\Assignments\\\\SCADA Assignment\" -Recurse -Depth 2)",
-      "Bash(Select-Object FullName, Name, PSIsContainer)",
-      "Bash(Format-Table -AutoSize)"
-    ]
-  }
-}

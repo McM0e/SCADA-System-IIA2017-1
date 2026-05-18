@@ -15,7 +15,7 @@ namespace Huginn
     {
         private const string ConnectionString = "Server=10.0.0.150,1433;Database=SCADAAssignement;User Id=sa;Password=sh@3fIJrP#4sl5d@xkYHdCq#b;TrustServerCertificate=True;";
 
-        public static (bool ok, int brukerId, string token) Login(string email, string password)
+        public static (bool ok, int userId, string token) Login(string email, string password)
         {
             var conn = new SqlConnection(ConnectionString);
             conn.Open();
@@ -39,13 +39,13 @@ namespace Huginn
             { return (false, 0, null); }
 
             string token = Guid.NewGuid().ToString("N") + Guid.NewGuid().ToString("N");
-            DateTime utloper = DateTime.UtcNow.AddDays(30);
+            DateTime expires = DateTime.UtcNow.AddDays(7);
 
             var insert = new SqlCommand(
             "INSERT INTO Sessions (Token, UserId, ExpiresAt) VALUES (@t, @id, @e)", conn);
             insert.Parameters.AddWithValue("@t", token);
             insert.Parameters.AddWithValue("@id", id);
-            insert.Parameters.AddWithValue("@e", utloper);
+            insert.Parameters.AddWithValue("@e", expires);
             insert.ExecuteNonQuery();
 
             return (true, id, token);

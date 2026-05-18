@@ -61,9 +61,25 @@ Features implemented:
 ---
 
 ## Task 5: Cyber Security
-Analysis and implementation of security measures for the SCADA system (e.g., network segmentation, authentication, OPC security).
+Security measures implemented across the SCADA system.
 
-> *Not yet implemented.*
+### Authentication — Huginn (C#)
+- Email/password login with BCrypt password hashing; the hash and salt are stored in the database and verified server-side (`AuthService.cs`)
+- On successful login, a 64-character cryptographically random session token (two concatenated GUIDs) is generated and stored in the `Sessions` table with a 30-day expiry
+- On startup, Huginn reads the locally stored token and validates it against the database (token + expiry check) before showing the main window — no re-entry of credentials needed
+- Logout deletes the session row from the database, invalidating the token server-side
+- The session token is stored locally in `%AppData%\Huginn\session.dat`, encrypted with Windows DPAPI (`ProtectedData.Protect`, `DataProtectionScope.CurrentUser`) — the file can only be decrypted by the same Windows user account on the same machine
+
+### Authorization — Huginn (C#)
+- Role-based access control: the admin menu is hidden at the UI level for non-admin users; the role is resolved from the database at login and not trusted from client state
+
+### OPC UA Security — Bifrost and Muninn (LabVIEW)
+- OPC UA connections to the server require username/password authentication (`OpcClientIdentity`)
+- Credentials are not hardcoded; they are read from the JSON configuration file stored in `%AppData%\Huginn\config.json`
+
+### Database Access
+- SQL queries in Huginn use parameterized queries (`cmd.Parameters.AddWithValue`) to prevent SQL injection
+- Database credentials are loaded at runtime from the user-scoped config file, not embedded in the binary
 
 ---
 

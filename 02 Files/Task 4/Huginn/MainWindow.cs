@@ -85,17 +85,17 @@ namespace Huginn
             cols["AlarmId"].FillWeight            = 30;
             cols["Sensor"].HeaderText             = "Sensor";
             cols["Sensor"].FillWeight             = 90;
-            cols["Value"].HeaderText              = "Verdi";
+            cols["Value"].HeaderText              = "Value";
             cols["Value"].FillWeight              = 50;
-            cols["severity"].HeaderText           = "Alvorlighet";
+            cols["severity"].HeaderText           = "Severity";
             cols["severity"].FillWeight           = 70;
-            cols["AlarmLimit"].HeaderText         = "Grense";
+            cols["AlarmLimit"].HeaderText         = "Limit";
             cols["AlarmLimit"].FillWeight         = 50;
-            cols["TimestampRaised"].HeaderText    = "Utløst";
+            cols["TimestampRaised"].HeaderText    = "Raised";
             cols["TimestampRaised"].FillWeight    = 120;
-            cols["AcknowledgedBy"].HeaderText     = "Kvittert av";
+            cols["AcknowledgedBy"].HeaderText     = "Acked By";
             cols["AcknowledgedBy"].FillWeight     = 80;
-            cols["TimestampResolved"].HeaderText  = "Løst";
+            cols["TimestampResolved"].HeaderText  = "Acknowledged";
             cols["TimestampResolved"].FillWeight  = 120;
             cols["Status"].HeaderText             = "Status";
             cols["Status"].FillWeight             = 60;
@@ -205,7 +205,7 @@ namespace Huginn
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Feil ved tilkobling");
+                MessageBox.Show("Error ocured while connecting");
             }
 
         }

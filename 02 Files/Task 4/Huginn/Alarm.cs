@@ -155,7 +155,6 @@ namespace Huginn
 
                 using (var cmd = new SqlCommand($"SELECT measurementId FROM Alarm_MeasurementId  WHERE Name='{alarm.Sensor}' AND Value={alarm.Value} AND Timestamp='{alarm.TimestampRaised}'", conn))
                 {
-                    //MessageBox.Show($"SELECT measurementId FROM Alarm_MeasurementId  WHERE Name='{alarm.Sensor}' AND Value={alarm.Value} AND Timestamp='{alarm.TimestampRaised}'");
                     var reader = cmd.ExecuteReader();
                     reader.Read();
                     if (reader == null) return 0;
@@ -169,7 +168,6 @@ namespace Huginn
 
         public void CheckLimit(string sensor, double temp, DateTime timestamp)
         {
-            //MessageBox.Show(sensor);
             config = ConfigManager.Load();
             string ConnectionString = $"Server={config.dbServer.url};Database={config.dbServer.datebase};User Id={config.dbServer.username};Password={config.dbServer.password};TrustServerCertificate=True;";
             double limit;

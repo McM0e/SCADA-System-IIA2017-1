@@ -17,7 +17,7 @@ namespace Huginn
             InitializeComponent();
         }
 
-        public int BrukerId { get; private set; }
+        public int userId { get; private set; }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -30,7 +30,7 @@ namespace Huginn
                 return;
             }
 
-            BrukerId = id;
+            userId = id;
             if (token != null) TokenStorage.SaveToken(token);
             DialogResult = DialogResult.OK;
 

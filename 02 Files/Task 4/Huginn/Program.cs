@@ -13,19 +13,19 @@ namespace Huginn
         static void Main()
         {
 
-            string lagretToken = TokenStorage.ReadToken();
-            bool erInnlogget = false;
+            string storedToken = TokenStorage.ReadToken();
+            bool isLoggedIn = false;
             int userId = 0;
 
-            if (!string.IsNullOrEmpty(lagretToken))
+            if (!string.IsNullOrEmpty(storedToken))
             {
 
-                userId = AuthService.ValidateToken(lagretToken);
-                erInnlogget = userId > 0;
+                userId = AuthService.ValidateToken(storedToken);
+                isLoggedIn = userId > 0;
             }
 
 
-            if (!erInnlogget)
+            if (!isLoggedIn)
             {
                 using (var login = new loginForm())
                 {
@@ -37,7 +37,6 @@ namespace Huginn
                 }
             }
 
-            // Start hovedvinduet
             Application.Run(new MainWindow(userId));
         }
     } }

@@ -20,12 +20,12 @@ namespace Huginn
         {
             Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
 
-            byte[] kryptert = ProtectedData.Protect(
+            byte[] encrypted = ProtectedData.Protect(
                 Encoding.UTF8.GetBytes(token),
                 null,
                 DataProtectionScope.CurrentUser
                 );
-            File.WriteAllBytes(FilePath, kryptert);
+            File.WriteAllBytes(FilePath, encrypted);
         }
         
         public static string ReadToken()
@@ -33,9 +33,9 @@ namespace Huginn
             if (!File.Exists(FilePath)) return null;
             try
             {
-                byte[] kryptert = File.ReadAllBytes(FilePath);
-                byte[] dekryptert = ProtectedData.Unprotect(kryptert, null, DataProtectionScope.CurrentUser);
-                return Encoding.UTF8.GetString(dekryptert);
+                byte[] encrypted = File.ReadAllBytes(FilePath);
+                byte[] decrypted = ProtectedData.Unprotect(encrypted, null, DataProtectionScope.CurrentUser);
+                return Encoding.UTF8.GetString(decrypted);
             }
             catch
             { return null; }
